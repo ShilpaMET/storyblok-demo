@@ -1,8 +1,8 @@
-
+import { storyblokEditable } from "@storyblok/react/rsc";
 export const Testinomial = ({ blok }: any) => {
 
     return (
-        <div className="bg-white p-8 rounded-sm shadow">
+        <div {...storyblokEditable(blok)} className="bg-white p-8 rounded-sm shadow">
             <p className="text-xl leading-relaxed text-gray-700">
                 {blok.comment}
             </p>

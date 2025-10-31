@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const Tour = ({blok}:any) => {
   return (
-    <main
+    <main {...storyblokEditable(blok)}
       className="container mx-auto px-4 w-full pt-32 pb-16"
     >
       <h1 className="text-3xl md:text-5xl font-bold">{blok.name}</h1>
