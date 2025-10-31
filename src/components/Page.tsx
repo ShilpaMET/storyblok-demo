@@ -1,4 +1,4 @@
-import { StoryblokComponent } from "@storyblok/react";
+import { StoryblokComponent, storyblokEditable, } from "@storyblok/react";
 
 
 export const Page = ({ blok }: any) => {
@@ -7,7 +7,7 @@ export const Page = ({ blok }: any) => {
     }
 
     return (
-        <main>
+        <main {...storyblokEditable(blok)}>
             {blok.body.map((blok: any) => {
                 return <StoryblokComponent blok={blok} key={blok._uid}></StoryblokComponent>
             })}
