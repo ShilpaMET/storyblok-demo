@@ -29,20 +29,20 @@ export const Tour = ({ blok }: any) => {
         dangerouslySetInnerHTML={{
           __html:
             renderRichText(blok.body, {
-              resolver: {
-                image: (node: any) => {
-                  const [width, height] = node.attrs.src
-                    ?.split("/")[5]
-                    ?.split("x") || [1504, 0];
-                  return `<img 
-                    src="${node.attrs.src}/m/1504x0/filters:quality(75)"
-                    alt="${node.attrs.alt || ''}"
-                    loading="lazy"
-                    width="${width}"
-                    height="${height}"
-                  />`;
-                },
-              },
+              // resolver: {
+              //   image: (node: any) => {
+              //     const [width, height] = node.attrs.src
+              //       ?.split("/")[5]
+              //       ?.split("x") || [1504, 0];
+              //     return `<img 
+              //       src="${node.attrs.src}/m/1504x0/filters:quality(75)"
+              //       alt="${node.attrs.alt || ''}"
+              //       loading="lazy"
+              //       width="${width}"
+              //       height="${height}"
+              //     />`;
+              //   },
+              // },
             }) ?? "",
         }}
       ></div>
